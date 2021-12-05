@@ -1,3 +1,4 @@
 module.exports = (req, res) => {
-  res.status(200).send('ok');
+  const { token } = req.body;
+  res.status(200).send({ token });
 };

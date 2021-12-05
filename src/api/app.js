@@ -1,6 +1,6 @@
 const express = require('express');
 
-const { ValidateNewUser, ValidateLogin } = require('../middlewares');
+const { ValidateNewUser, ValidateLogin, GenerateWebToken } = require('../middlewares');
 const { UserRoute } = require('../routes');
 const { Login } = require('../controllers');
 
@@ -15,6 +15,6 @@ app.get('/', (_request, response) => {
 
 app.use('/users', ValidateNewUser, UserRoute);
 
-app.post('/login', ValidateLogin, Login);
+app.post('/login', ValidateLogin, GenerateWebToken, Login);
 
 module.exports = app;
