@@ -1,7 +1,8 @@
 const express = require('express');
 
-const { ValidateNewUser } = require('../middlewares');
+const { ValidateNewUser, ValidateLogin } = require('../middlewares');
 const { UserRoute } = require('../routes');
+const { Login } = require('../controllers');
 
 const app = express();
 app.use(express.json());
@@ -13,5 +14,7 @@ app.get('/', (_request, response) => {
 // Não remover esse end-point, ele é necessário para o avaliador
 
 app.use('/users', ValidateNewUser, UserRoute);
+
+app.post('/login', ValidateLogin, Login);
 
 module.exports = app;
