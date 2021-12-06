@@ -1,10 +1,9 @@
-const { Recipe } = require('../../models');
+const { PostRecipe } = require('../../services');
 
 module.exports = async (req, res) => {
   const { name, ingredients, preparation } = req.body;
-  const NewRecipe = new Recipe({ name, ingredients, preparation, userId: req.user });
   try {
-    await NewRecipe.save();
+    const NewRecipe = await PostRecipe({ name, ingredients, preparation, userId: req.user });
     return res.status(201).send({ recipe: NewRecipe });
   } catch (err) {
     return res.status(500).send(err);
