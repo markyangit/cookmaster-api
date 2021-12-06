@@ -1,7 +1,7 @@
 const express = require('express');
 
 const { ValidateNewUser, ValidateLogin, GenerateWebToken } = require('../middlewares');
-const { UserRoute } = require('../routes');
+const { UserRoute, RecipesRoute } = require('../routes');
 const { Login } = require('../controllers');
 
 const app = express();
@@ -16,5 +16,7 @@ app.get('/', (_request, response) => {
 app.use('/users', ValidateNewUser, UserRoute);
 
 app.post('/login', ValidateLogin, GenerateWebToken, Login);
+
+app.use('/recipes', RecipesRoute);
 
 module.exports = app;

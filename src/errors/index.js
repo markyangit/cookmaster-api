@@ -11,4 +11,7 @@ module.exports = {
   IncorrectUsernameOrPassword: {
     message: 'Incorrect username or password',
   },
+  JwtMalformed: {
+    message: 'jwt malformed',
+  },
 };
