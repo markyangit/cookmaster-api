@@ -14,4 +14,8 @@ module.exports = {
   JwtMalformed: {
     message: 'jwt malformed',
   },
+  RecipeNotFound: {
+    status: 404,
+    message: 'recipe not found',
+  },
 };
