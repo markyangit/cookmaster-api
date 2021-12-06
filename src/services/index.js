@@ -3,6 +3,7 @@ const PostRecipe = require('./Recipes/PostRecipe');
 const GetRecipes = require('./Recipes/GetRecipes');
 const GetRecipeById = require('./Recipes/GetRecipeById');
 const UpdateRecipeById = require('./Recipes/UpdateRecipeById');
+const DeleteRecipeById = require('./Recipes/DeleteRecipeById');
 
 module.exports = {
   PostUser,
@@ -10,4 +11,5 @@ module.exports = {
   GetRecipes,
   GetRecipeById,
   UpdateRecipeById,
+  DeleteRecipeById,
 };
