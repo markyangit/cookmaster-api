@@ -1,5 +1,5 @@
 const jwt = require('jsonwebtoken');
-const { JwtMalformed } = require('../errors');
+const { MissingAuthToken } = require('../errors');
 const { User } = require('../models');
 
 const secret = 'meusegredo';
@@ -7,7 +7,7 @@ const secret = 'meusegredo';
 module.exports = async (req, res, next) => {
   const token = req.headers.authorization;
 
-  if (!token) return res.status(401).send(JwtMalformed);
+  if (!token) return res.status(401).send(MissingAuthToken);
 
   try {
     const { data } = jwt.verify(token, secret);

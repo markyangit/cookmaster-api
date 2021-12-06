@@ -11,11 +11,12 @@ module.exports = {
   IncorrectUsernameOrPassword: {
     message: 'Incorrect username or password',
   },
-  JwtMalformed: {
-    message: 'jwt malformed',
-  },
   RecipeNotFound: {
     status: 404,
     message: 'recipe not found',
+  },
+  MissingAuthToken: {
+    status: 401,
+    message: 'missing auth token',
   },
 };
