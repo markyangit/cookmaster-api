@@ -1,9 +1,8 @@
-const { User } = require('../../models');
+const { PostUser } = require('../../services');
 
 module.exports = async (req, res) => {
-  const newUser = new User(req.body);
   try {
-    await newUser.save();
+    const newUser = await PostUser(req.body);
     const { name, email, role } = newUser;
     return res.status(201).send({ user: { name, email, role } });
   } catch (err) {

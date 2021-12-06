@@ -1,6 +1,6 @@
-const { Recipe } = require('../../models');
+const { GetRecipes } = require('../../services');
 
 module.exports = async (_req, res) => {
-  const recipes = await Recipe.find();
+  const recipes = await GetRecipes();
   res.status(200).send(recipes);
 };
