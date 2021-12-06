@@ -18,8 +18,17 @@ const UserSchema = new mongoose.Schema({
   role: String,
 });
 
+const RecipeSchema = new mongoose.Schema({
+  name: String,
+  ingredients: String,
+  preparation: String,
+  userId: String,
+});
+
 const User = mongoose.model('users', UserSchema);
+const Recipe = mongoose.model('recipes', RecipeSchema);
 
 module.exports = {
   User,
+  Recipe,
 };
