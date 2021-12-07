@@ -23,6 +23,7 @@ const RecipeSchema = new mongoose.Schema({
   ingredients: String,
   preparation: String,
   userId: String,
+  image: String,
 });
 
 const User = mongoose.model('users', UserSchema);
