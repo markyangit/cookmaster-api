@@ -13,7 +13,7 @@ const {
 } = require('../controllers');
 const { DecodeWebToken, ValidateRecipe } = require('../middlewares');
 
-// Storage e configs feitas com a ajuda do Rodrigo Merlone da Turma 12
+// Storage e configs feitas com a ajuda do Rodrigo Merlone da Turma 12.
 const storage = multer.diskStorage({
   destination: (_req, _file, callback) => callback(null, path.join(__dirname, '../uploads')),
   filename: ({ params: { id } }, _file, callback) => callback(null, `${id}`),
