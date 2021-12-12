@@ -5,7 +5,9 @@ require('dotenv').config();
 
 mongoose.Promise = global.Promise;
 
-const MONGO_DB_URL = `mongodb://${process.env.HOST || 'mongodb'}:27017/Cookmaster`;
+const { DB_NAME, PORT, HOST } = process.env;
+
+const MONGO_DB_URL = `mongodb://${HOST || 'mongodb'}:${PORT}/${DB_NAME}`;
 
 mongoose.connect(MONGO_DB_URL)
   .then(() => console.log('Conectado ao MONGODB'))

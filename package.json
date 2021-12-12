@@ -1,7 +1,7 @@
 {
-  "name": "sd-0x-project-cookmaster-v2",
+  "name": "cookmaster-api",
   "version": "1.0.0",
-  "description": "Você já usa o GitHub diariamente para desenvolver os exercícios, certo? Agora, para desenvolver os projetos, você deverá seguir as instruções a seguir. Fique atento a cada passo, e se tiver qualquer dúvida, nos envie por Slack! #vqv 🚀",
+  "description": "Projeto Cookmaster desenvolvido no bloco 28 do bootcamp da Trybe - Autenticação com JWT e upload com Multer.",
   "main": "./src/api/server.js",
   "scripts": {
     "test": "jest --runInBand --detectOpenHandles --forceExit",
@@ -14,15 +14,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tryber/sd-0x-cookmaster-v2.git"
+    "url": "git+https://github.com/markyangit/cookmaster-api"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/tryber/sd-0x-cookmaster-v2/issues"
+    "url": "https://github.com/markyangit/cookmaster-api/issues"
   },
-  "homepage": "https://github.com/tryber/sd-0x-cookmaster-v2#readme",
+  "homepage": "https://github.com/markyangit/cookmaster-api#readme",
   "dependencies": {
     "body-parser": "1.19.0",
     "dotenv": "8.2.0",
