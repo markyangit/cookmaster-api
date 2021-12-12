@@ -52,6 +52,12 @@ Essa API foi desenvolvida durante o bloco 28 do bootcamp de Desenvolvimento Web 
 
 ## Arquitetura:
 ![Arquitetura](./public/architecture.png)
+
+## Bibliotecas externas:
+
+- Joi
+- Mongoose
+- Express
 ---
 ## Coleções
 
